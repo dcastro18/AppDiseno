@@ -1,1 +1,154 @@
 /* You can add global styles to this file, and also import other style files */
+html{
+  background-color: #212020;
+}
+
+.toolbar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  background-color: #2F7D6F;
+  color: white;
+  font-weight: 600;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.toolbarElement {
+  font-size: 20px;
+}
+
+.toolbarSelectedElement {
+  font-size: 20px;
+  text-decoration: underline;
+  text-underline-offset: 8px;
+  text-decoration-skip-ink: none;
+  text-decoration-thickness: 4px;
+}
+
+.spacer {
+  flex: 1;
+}
+
+.spacerLine {
+  background-color: white;
+  height: 80%;
+  width: 4px;
+  margin: 6px;
+}
+
+.contentCenter {
+  display: flex;
+  margin: 82px auto 32px;
+  padding: 0 16px;
+    
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.contentLeft {
+  display: flex;
+  margin: 50px auto 0px;
+  padding: 0 0px;
+  max-width: 90%;
+  flex-direction: column;
+  align-items: left;
+  color: white;
+}
+
+.contentGrid {
+  display: grid;
+  align-items: center;
+  width: auto;
+  grid-template-columns: auto auto auto;
+  grid-row: auto;
+  gap: 10px;
+  padding: 10px;
+}
+
+.gridItem {
+  display: flex;
+  height: 60px;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background-color: #2F7D6F;
+  color: white;
+}
+
+.cardHead {
+  height: 50px;
+  line-height: 50px;
+  width: 80%;
+  background-color: #2F7D6F;
+  color: white;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  text-align: center;
+  vertical-align: middle;
+}
+
+.cardItem {
+  font-size: 20px;
+  display: flex;
+  padding: 5px;
+  height: 40px;
+  width: auto;
+  flex-direction: column;
+  align-items: left;
+  justify-content: center;
+  color: black;
+  border-color: black;
+  border-style: none none solid none;
+}
+
+.cardButton {
+  font-size: 20px;
+  display: flex;
+  height: 50px;
+  width: 80%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background-color: #2F7D6F;
+  color: white;
+}
+
+.cardButtonCancel {
+  font-size: 20px;
+  display: flex;
+  height: 50px;
+  width: 80%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background-color: #7D2F2F;
+  color: white;
+}
+
+.cardButtonDisabled {
+  font-size: 20px;
+  display: flex;
+  height: 50px;
+  width: 80%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background-color: gray;
+  color: white;
+}
+
+.cardText {
+  padding: 5px;
+  font-size: 20px;
+}

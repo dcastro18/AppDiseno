@@ -1,1 +1,24 @@
-<p>login works!</p>
+<!--Nav bar-->
+<div class="toolbar" role="banner">
+  <h1>Sala Deportiva</h1>
+  <div class="spacer"></div>
+  <div class="spacerLine"></div>
+  <label class="toolbarElement">Registro</label>
+  <div class="spacerLine"></div>
+  <a class="toolbarSelectedElement">Iniciar Sesión</a>
+</div>
+<!--contenido-->
+<div class="contentCenter">
+  <h1>Inicio de Sesión</h1>
+  <div class="inputSpace">
+    <label class="toolbarElement">Correo electrónico: </label>
+    <input #user>
+  </div>
+  <div class="inputSpace">
+    <label class="toolbarElement">Contraseña: </label>
+    <input #pass type="password">
+  </div>
+  <button (click)="onSubmit(user.value, pass.value)" class="loginButton">Iniciar Sesión</button>
+  
+</div>
+
