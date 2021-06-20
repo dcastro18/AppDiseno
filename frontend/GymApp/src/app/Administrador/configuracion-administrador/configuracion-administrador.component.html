@@ -1,0 +1,64 @@
+<!--Nav bar-->
+<div class="toolbar" role="banner">
+  <h1>Sala Deportiva</h1>
+  <div class="spacer"></div>
+  <div class="spacerLine"></div>
+  <a class="toolbarElement">Clientes</a>
+  <div class="spacerLine"></div>
+  <a class="toolbarElement">Instructores</a>
+  <div class="spacerLine"></div>
+  <a class="toolbarElement">Calendario</a>
+  <div class="spacerLine"></div>
+  <a class="toolbarElement">Pagos</a>
+  <div class="spacerLine"></div>
+  <a class="toolbarSelectedElement">Configuración</a>
+</div>
+
+<div class="contentCenter">
+  <h1>Configuración de la sala</h1>
+  <div style="margin: 5px;">
+    <label style="font-size: 20px;">Capacidad: </label>
+    <input style="font-size: 20px;" type="number" min="0" max="100" value="0">
+  </div>
+  <div style="margin: 5px;">
+    <label style="font-size: 20px;">Costo de matrícula: ₡</label>
+    <input style="font-size: 20px;" type="number" min="0" max="100000" value="0" step="1000">
+  </div>
+</div>
+
+<!--carta servicios-->
+<div class="contentCenter" style="width: 40%;">
+  <h1>Servicios disponibles:</h1>
+  <div class="cardHead">
+    <label class="toolbarElement">Servicios</label>
+  </div>
+  <div class="profileCardBody">
+    <div class="cardItem">
+      <label class="cardText">Nombre</label>
+    </div>
+    <div class="cardItem">
+    </div>
+    <!--contenido servicios-->
+    <div class="cardItem">
+      <label class="cardText">Yoga</label>
+    </div>
+    <div class="cardItem">
+      <button class="cardButtonCancel">Eliminar</button>
+    </div>
+  </div>
+</div>
+
+<div class="contentCenter" style="width: 30%;">
+  <div class="cardHead">
+    <label class="toolbarElement">Registrar servicio</label>
+  </div>
+  <div class="flexCardBody">
+    <div class="cardContentCenter">
+      <div style="margin: 5px;">
+        <label class="cardText">Nombre: </label>
+        <input #name class="cardText">
+      </div>
+      <button class="cardButton" style="width: 50%;">Agregar servicio</button>
+    </div>
+  </div>
+</div>
