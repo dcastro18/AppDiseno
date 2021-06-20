@@ -1,1 +1,127 @@
-<p>gestion-instructores-administrador works!</p>
+<!--Nav bar-->
+<div class="toolbar" role="banner">
+  <h1>Sala Deportiva</h1>
+  <div class="spacer"></div>
+  <div class="spacerLine"></div>
+  <a class="toolbarElement">Clientes</a>
+  <div class="spacerLine"></div>
+  <a class="toolbarSelectedElement">Instructores</a>
+  <div class="spacerLine"></div>
+  <a class="toolbarElement">Calendario</a>
+  <div class="spacerLine"></div>
+  <a class="toolbarElement">Pagos</a>
+  <div class="spacerLine"></div>
+  <a class="toolbarElement">Configuración</a>
+</div>
+
+
+<div class="contentCenter">
+  <!--carta registro instructor-->
+  <div class="contentCenter" style="width: 40%;">
+    <div class="cardHead">
+      <label class="toolbarElement">Registrar instructor</label>
+    </div>
+    <div class="flexCardBody">
+      <div class="cardContentCenter">
+        <div style="margin: 5px;">
+          <label class="cardText">Nombre: </label>
+          <input #name class="cardText">
+        </div>
+        <div style="margin: 5px;">
+          <label class="cardText">Identificación: </label>
+          <input #id class="cardText">
+        </div>
+        <div style="margin: 5px;">
+          <label class="cardText">Correo: </label>
+          <input #email class="cardText">
+        </div>
+        <div style="margin: 5px;">
+          <label class="cardText">Teléfono: </label>
+          <input #phone class="cardText">
+        </div>
+        <div style="margin: 5px;">
+          <label class="cardText">Contraseña: </label>
+          <input #password class="cardText">
+        </div>
+        <div style="margin: 5px;">
+          <label class="cardText">Tipo: </label>
+          <select #type class="cardText">
+            <option value="normal">Normal</option>
+            <option value="temporal">Temporal</option>
+          </select>
+        </div>
+        <div style="margin: 5px;">
+          <label class="cardText">Especialidades: </label>
+          <form #type class="cardText">
+            <div>
+              <label class="cardText">Yoga</label>
+              <input type="checkbox" value="yoga">
+            </div>
+            <div>
+              <label class="cardText">Pilates</label>
+              <input type="checkbox" value="pilates">
+            </div>
+          </form>
+        </div>
+        <button class="cardButton" style="width: 50%;">Agregar instructor</button>
+      </div>
+    </div>
+  </div>
+  <!--combobox estado-->
+  <div>
+    <label class="cardText" for="clientState">Estado:</label>
+    <select class="toolbarElement" style="margin: 5px;" name="clientState" id="clientState">
+      <option value="activo">Normal</option>
+      <option value="moroso">Temporal</option>
+    </select>
+  </div>
+  <!--carta instructores-->
+  <div class="cardHead">
+    <label class="toolbarElement">Instructores</label>
+  </div>
+  <div class="instructorCardBody">
+    <div class="cardItem">
+      <label class="cardText">Nombre</label>
+    </div>
+    <div class="cardItem">
+      <label class="cardText">Identificación</label>
+    </div>
+    <div class="cardItem">
+      <label class="cardText">Correo</label>
+    </div>
+    <div class="cardItem">
+      <label class="cardText">Teléfono</label>
+    </div>
+    <div class="cardItem">
+      <label class="cardText">Tipo</label>
+    </div>
+    <div class="cardItem">
+      <label class="cardText">Especialidades</label>
+    </div>
+    <div class="cardItem">
+    </div>
+    <!--contenido instructores-->
+    <div class="cardItem">
+      <label class="cardText">Marco</label>
+    </div>
+    <div class="cardItem">
+      <label class="cardText">123456789</label>
+    </div>
+    <div class="cardItem">
+      <label class="cardText">123@ejemplo.com</label>
+    </div>
+    <div class="cardItem">
+      <label class="cardText">87654321</label>
+    </div>
+    <div class="cardItem">
+      <label class="cardText">Normal</label>
+    </div>
+    <div class="cardItem">
+      <label class="cardText">Yoga, Pilates</label>
+    </div>
+    <div class="cardItem">
+      <button class="cardButton">Modificar</button>
+      <button class="cardButtonCancel">Eliminar</button>
+    </div>
+  </div>
+</div>

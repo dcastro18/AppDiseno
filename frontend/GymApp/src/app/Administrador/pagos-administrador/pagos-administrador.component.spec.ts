@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { VerClientesComponent } from './ver-clientes.component';
+import { PagosAdministradorComponent } from './pagos-administrador.component';
 
-describe('VerClientesComponent', () => {
-  let component: VerClientesComponent;
-  let fixture: ComponentFixture<VerClientesComponent>;
+describe('PagosAdministradorComponent', () => {
+  let component: PagosAdministradorComponent;
+  let fixture: ComponentFixture<PagosAdministradorComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ VerClientesComponent ]
+      declarations: [ PagosAdministradorComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(VerClientesComponent);
+    fixture = TestBed.createComponent(PagosAdministradorComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

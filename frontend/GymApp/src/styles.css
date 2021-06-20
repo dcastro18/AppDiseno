@@ -110,10 +110,10 @@ html{
 }
 
 .cardButton {
-  font-size: 20px;
+  font-size: 18px;
   display: flex;
   height: 50px;
-  width: 80%;
+  width: 70%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -123,10 +123,10 @@ html{
 }
 
 .cardButtonCancel {
-  font-size: 20px;
+  font-size: 18px;
   display: flex;
   height: 50px;
-  width: 80%;
+  width: 70%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -136,10 +136,10 @@ html{
 }
 
 .cardButtonDisabled {
-  font-size: 20px;
+  font-size: 18px;
   display: flex;
   height: 50px;
-  width: 80%;
+  width: 70%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
