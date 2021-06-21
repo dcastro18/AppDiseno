@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AdministradorService } from '../administrador.service';
 
 @Component({
   selector: 'app-calendario-administrador',
@@ -7,9 +8,24 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CalendarioAdministradorComponent implements OnInit {
 
-  constructor() { }
+  listaLecciones:any = []
+
+  constructor(
+    private _adminService: AdministradorService
+  ) { }
 
   ngOnInit(): void {
+    this.getLecciones();
+  }
+
+ 
+  getLecciones(){ // Por mientras saca los instructores
+    this._adminService.getLecciones().subscribe(
+      data => {
+        this.listaLecciones = data
+        console.log(data);
+      }
+    );
   }
 
 }

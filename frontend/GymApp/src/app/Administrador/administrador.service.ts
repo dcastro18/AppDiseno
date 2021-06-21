@@ -8,10 +8,14 @@ import { environment } from 'src/environments/environment';
 export class AdministradorService {
 
   _apiUrl = environment.url + "/api/administradores";
+
+  _apiUrl2 =  environment.url + "/api/lecciones";
+
+  _apiUrl3 =  environment.url + "/api/servicios";
   
   constructor(private _http: HttpClient) { }
   
-  getAdmins(){
+  getClientes(){
     return this._http.get<any>(this._apiUrl);
   }
 
@@ -22,19 +26,26 @@ export class AdministradorService {
     );
   }
 
-    // post(form){
-  //   const headers = {"Content-Type":"application/json"};
-  //   return this._http.post<any>(this._apiUrl , form, {headers});
-  // }
-
-  getClientes(){
-    const headers = {"Content-Type":"application/json"};
-    return this._http.get<any>(this._apiUrl);
+  getServicios()
+  {
+    return this._http.get<any>(this._apiUrl3);
   }
 
-  // post(form){
+  // post(infoCliente){
   //   const headers = {"Content-Type":"application/json"};
-  //   return this._http.post<any>(this._apiUrl , form, {headers});
+  //   return this._http.post<any>(this._apiUrl , infoCliente, {headers});
   // }
+
+  // getClientes(){ 
+  //   const headers = {"Content-Type":"application/json"};
+  //   return this._http.get<any>(this._apiUrl);
+  // }
+  //Filtros: activos y morosos, por servicio y por leccion
+
+  //Calendario
+
+  getLecciones(){
+    return this._http.get<any>(this._apiUrl2);
+  }
 
 }

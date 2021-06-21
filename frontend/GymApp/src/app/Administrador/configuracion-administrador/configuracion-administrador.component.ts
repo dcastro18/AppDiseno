@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AdministradorService } from '../administrador.service';
 
 @Component({
   selector: 'app-configuracion-administrador',
@@ -7,9 +8,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConfiguracionAdministradorComponent implements OnInit {
 
-  constructor() { }
+  listaServicios:any = []
+
+  configSala:any;
+
+  constructor(
+    private _adminService: AdministradorService
+  ) { }
 
   ngOnInit(): void {
+    this.getServicios();
+  }
+
+  getServicios(){ // Por mientras saca los instructores
+    this._adminService.getServicios().subscribe(
+      data => {
+        this.listaServicios = data
+        console.log(data);
+      }
+    );
   }
 
 }

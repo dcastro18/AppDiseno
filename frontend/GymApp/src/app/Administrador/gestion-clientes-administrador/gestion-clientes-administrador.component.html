@@ -25,25 +25,25 @@
       <div class="cardContentCenter">
         <div style="margin: 5px;">
           <label class="cardText">Nombre: </label>
-          <input #name class="cardText">
+          <input id="nombre" class="cardText">
         </div>
         <div style="margin: 5px;">
           <label class="cardText">Identificación: </label>
-          <input #id class="cardText">
+          <input id="id" class="cardText">
         </div>
         <div style="margin: 5px;">
           <label class="cardText">Correo: </label>
-          <input #email class="cardText">
+          <input id="correo" class="cardText">
         </div>
         <div style="margin: 5px;">
           <label class="cardText">Teléfono: </label>
-          <input #phone class="cardText">
+          <input id="telefono" class="cardText">
         </div>
         <div style="margin: 5px;">
           <label class="cardText">Contraseña: </label>
-          <input #password class="cardText">
+          <input id="contraseña" class="cardText">
         </div>
-        <button class="cardButton" style="width: 50%;">Agregar cliente</button>
+        <button class="cardButton" style="width: 50%;" (click)="registrarCliente()">Agregar cliente</button>
       </div>
     </div>
   </div>
@@ -66,34 +66,34 @@
       <label class="cardText">Nombre</label>
     </div>
     <div class="cardItem">
-      <label class="cardText">Identificación</label>
+      <label class="cardText">Teléfono</label>
     </div>
     <div class="cardItem">
       <label class="cardText">Correo</label>
     </div>
     <div class="cardItem">
-      <label class="cardText">Teléfono</label>
+      <label class="cardText">Morosidad</label>
     </div>
     <div class="cardItem">
     </div>
     <!--contenido cliente-->
-    <div *ngFor="let cliente of listaClientes">
-      <div class="cardItem">
-        <label class="cardText">Yoga</label>
-      </div>
+    <ng-container *ngFor="let cliente of listaClientes">
       <div class="cardItem">
         <label class="cardText">{{ cliente.nombre }}</label>
       </div>
       <div class="cardItem">
-        <label class="cardText">Martes</label>
+        <label class="cardText">{{ cliente.numero }}</label>
       </div>
       <div class="cardItem">
-        <label class="cardText">10:00 - 11:00</label>
+        <label class="cardText">{{ cliente.correo }}</label>
+      </div>
+      <div class="cardItem">
+        <label class="cardText">{{ cliente.morosidad }}</label>
       </div>
       <div class="cardItem">
         <button class="cardButton">Más información</button>
       </div>
-    </div>
+    </ng-container>
     
   </div>
 </div>
@@ -155,23 +155,25 @@
       <label class="cardText">Hora</label>
     </div>
     <!--contenido cliente x leccion-->
-    <div class="cardItem">
-      <label class="cardText">Juan</label>
-    </div>
-    <div class="cardItem">
-      <label class="cardText">123456789</label>
-    </div>
-    <div class="cardItem">
-      <label class="cardText">Yoga</label>
-    </div>
-    <div class="cardItem">
-      <label class="cardText">Carlos</label>
-    </div>
-    <div class="cardItem">
-      <label class="cardText">Martes</label>
-    </div>
-    <div class="cardItem">
-      <label class="cardText">11:00 - 12:00</label>
-    </div>
+    <ng-container *ngFor="let clienteLeccion of clientesLeccionEscogida">
+      <div class="cardItem">
+        <label class="cardText">{{ clienteLeccion.nombre }}</label>
+      </div>
+      <div class="cardItem">
+        <label class="cardText">{{ clienteLeccion.numero }}</label>
+      </div>
+      <div class="cardItem">
+        <label class="cardText">{{ leccionEscogida.clase }}</label>
+      </div>
+      <div class="cardItem">
+        <label class="cardText">{{ leccionEscogida.instructor }}</label>
+      </div>
+      <div class="cardItem">
+        <label class="cardText">{{ leccionEscogida.fechaHora }}</label>
+      </div>
+      <div class="cardItem">
+        <label class="cardText">{{ leccionEscogida.clase }}</label>
+      </div>
+    </ng-container> 
   </div>
 </div>

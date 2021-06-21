@@ -39,12 +39,14 @@
     <div class="cardItem">
     </div>
     <!--contenido servicios-->
-    <div class="cardItem">
-      <label class="cardText">Yoga</label>
-    </div>
-    <div class="cardItem">
-      <button class="cardButtonCancel">Eliminar</button>
-    </div>
+    <ng-container *ngFor="let servicio of listaServicios">
+      <div class="cardItem">
+        <label class="cardText">{{ servicio.nombre }}</label>
+      </div>
+      <div class="cardItem">
+        <button class="cardButtonCancel">Eliminar</button>
+      </div>
+    </ng-container>
   </div>
 </div>
 
