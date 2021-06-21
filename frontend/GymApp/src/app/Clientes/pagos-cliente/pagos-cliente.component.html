@@ -26,12 +26,14 @@
       <label class="cardText">Detalle</label>
     </div>
     <!--contenido pagos pendientes-->
-    <div class="cardItem">
-      <label class="cardText">10,000</label>
-    </div>
-    <div class="cardItem">
-      <label class="cardText">Yoga, martes, 11:00</label>
-    </div>
+    <ng-container *ngFor="let pagoPendiente of listaPagosPendientes">
+      <div class="cardItem">
+        <label class="cardText">{{ pagoPendiente.monto }}</label>
+      </div>
+      <div class="cardItem">
+        <label class="cardText">{{ pagoPendiente.cliente }}</label>
+      </div>
+    </ng-container>
   </div>
 </div>
 
