@@ -9,7 +9,5 @@ router.get('/:id', administrador.getAdministrador);
 router.put('/:id', administrador.editAdministrador );
 router.delete('/:id', administrador.deleteAdministrador);
 
-router.get('/instructores', administrador.getInstructores);
-
 
 module.exports = router;
