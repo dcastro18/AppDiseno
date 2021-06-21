@@ -77,21 +77,24 @@
     <div class="cardItem">
     </div>
     <!--contenido cliente-->
-    <div class="cardItem">
-      <label class="cardText">Yoga</label>
+    <div *ngFor="let cliente of listaClientes">
+      <div class="cardItem">
+        <label class="cardText">Yoga</label>
+      </div>
+      <div class="cardItem">
+        <label class="cardText">{{ cliente.nombre }}</label>
+      </div>
+      <div class="cardItem">
+        <label class="cardText">Martes</label>
+      </div>
+      <div class="cardItem">
+        <label class="cardText">10:00 - 11:00</label>
+      </div>
+      <div class="cardItem">
+        <button class="cardButton">Más información</button>
+      </div>
     </div>
-    <div class="cardItem">
-      <label class="cardText">Juan</label>
-    </div>
-    <div class="cardItem">
-      <label class="cardText">Martes</label>
-    </div>
-    <div class="cardItem">
-      <label class="cardText">10:00 - 11:00</label>
-    </div>
-    <div class="cardItem">
-      <button class="cardButton">Más información</button>
-    </div>
+    
   </div>
 </div>
 

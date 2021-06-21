@@ -20,6 +20,10 @@ import { PagosAdministradorComponent } from './Administrador/pagos-administrador
 import { ModificarLeccionAdministradorComponent } from './Administrador/modificar-leccion-administrador/modificar-leccion-administrador.component';
 import { HomeInstructorComponent } from './Instructores/home-instructor/home-instructor.component';
 import { LeccionesInstructorComponent } from './Instructores/lecciones-instructor/lecciones-instructor.component';
+import { AdministradorService } from './Administrador/administrador.service';
+
+import { HttpClientModule } from '@angular/common/http';
+import { AdministradorRoutingModule } from './Administrador/administrador-routing.module';
 
 @NgModule({
   declarations: [
@@ -40,13 +44,16 @@ import { LeccionesInstructorComponent } from './Instructores/lecciones-instructo
     PagosAdministradorComponent,
     ModificarLeccionAdministradorComponent,
     HomeInstructorComponent,
-    LeccionesInstructorComponent
+    LeccionesInstructorComponent,
+    
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
+    AdministradorRoutingModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [AdministradorService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,10 +1,26 @@
 const administradorCtrl  = {};
-const Administrador = require('../models/administrador')
+const Administrador = require('../models/administrador');
+const Instructores = require('../models/instructor');
+
 administradorCtrl.getAdministradores = async (req, res) => {
     const administradores = await Administrador.find()
     res.json(administradores);
 }
 
+administradorCtrl.getInstructores = async (req, res) => {
+
+    try {
+        const instructores = await Instructores.find();
+        res.status(202).send(instructores);
+    } catch (err) {
+        res.status(500).json(
+            { 
+              message : 'the request failed', 
+              error: err
+            }
+        );
+    }   
+}
 
 administradorCtrl.createAdministrador = async (req, res) => {
     const administrador = new Administrador(req.body)

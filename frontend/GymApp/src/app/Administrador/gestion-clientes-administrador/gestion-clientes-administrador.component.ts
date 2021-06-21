@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { AdministradorService } from '../administrador.service';
+
 
 @Component({
   selector: 'app-gestion-clientes-administrador',
@@ -7,9 +9,25 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GestionClientesAdministradorComponent implements OnInit {
 
-  constructor() { }
+  listaClientes:any = []
+
+  constructor(
+    private _adminService: AdministradorService ,
+    //private authService : AuthserviceService
+  ) { }
 
   ngOnInit(): void {
+    this.getClientes()
+  }
+
+
+  getClientes(){ // Por mientras saca los instructores
+    this._adminService.getAdmins().subscribe(
+      data => {
+        this.listaClientes = data
+        console.log(data);
+      }
+    );
   }
 
 }
