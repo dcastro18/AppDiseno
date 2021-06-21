@@ -3,8 +3,7 @@ const {Schema }= mongoose;
 
 const SchemaServicio= new Schema({
     nombre: { type: String , required : true},
-    estado: {type: Boolean , required : true},
-    clientes: [mongoose.Schema.Types.ObjectId]
+    estado: {type: Boolean , required : true}
 });
 
 module.exports = mongoose.model('Servicio', SchemaServicio);

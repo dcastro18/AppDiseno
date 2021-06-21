@@ -1,11 +1,9 @@
 const leccionCtrl  = {};
-const Leccion = require('../models/leccion');
-
+const Leccion = require('../models/leccion')
 leccionCtrl.getLecciones = async (req, res) => {
-    const lecciones = await Leccion.find({}).populate({path: 'clientes', model: 'Cliente'});
+    const lecciones = await Leccion.find()
     res.json(lecciones);
 }
-
 
 
 leccionCtrl.createLeccion = async (req, res) => {

@@ -9,7 +9,5 @@ router.get('/:id', instructor.getInstructor);
 router.put('/:id', instructor.editInstructor );
 router.delete('/:id', instructor.deleteInstructor);
 
-router.get('/:servicio/:instructor', instructor.daElServicio);
-
 
 module.exports = router;

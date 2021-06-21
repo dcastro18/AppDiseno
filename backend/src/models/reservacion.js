@@ -3,8 +3,8 @@ const {Schema }= mongoose;
 
 const SchemaReservacion= new Schema({
     costo: { type: String , required : true},
-    cliente: {type: mongoose.Schema.Types.ObjectId, ref: 'Cliente', required : false},
-    leccion: {type: mongoose.Schema.Types.ObjectId, ref: 'Leccion', required : false}
+    idCliente: {type: String , required : true},
+    idLeccion: { type: String , required : true}
 });
 
 module.exports = mongoose.model('Reservacion', SchemaReservacion);
