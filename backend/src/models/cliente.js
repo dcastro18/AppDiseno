@@ -9,7 +9,8 @@ const SchemaCliente = new Schema({
     usuario :{type: String, required: true},
     contraseña: { type: String, required : true},
     morosidad :{ type: Number,required: true},
-    saldo :{type: Number, required: true}
+    saldo :{type: Number, required: true},
+    lecciones: {type: mongoose.Schema.Types.ObjectId, ref: 'Leccion', required : false}
 });
 
 module.exports = mongoose.model('Cliente', SchemaCliente);

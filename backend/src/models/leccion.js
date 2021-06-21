@@ -2,13 +2,11 @@ const mongoose = require('mongoose');
 const {Schema }= mongoose;
 
 const SchemaLeccion = new Schema({
-    clase: { type: String , required : true},
-    instructor: {type: String , required : true},
-    dia: { type: String , required : true},
-    hora :{ type: String, required: true},
+    clase: {type: mongoose.Schema.Types.ObjectId, ref: 'Servicio', required : false},
+    instructor: {type: mongoose.Schema.Types.ObjectId, ref: 'Instructor', required : false},
+    fechaHora: { type: Date , required : true},
     duracion :{type: String, required: true},
-    clientes :{type: Array, required: true}
+    clientes: [mongoose.Schema.Types.ObjectId]
 
 });
-
-module.exports = mongoose.model('Lección', SchemaLeccion);
+module.exports = mongoose.model('Leccion', SchemaLeccion);
