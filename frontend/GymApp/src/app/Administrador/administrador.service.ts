@@ -18,13 +18,7 @@ export class AdministradorService {
   getClientes(){
     return this._http.get<any>(this._apiUrl);
   }
-
-  getInstructores(){
-    const headers = {"Content-Type":"application/json"};
-    return this._http.get<any>(
-      `${this._apiUrl}/instructores`, {headers}
-    );
-  }
+  //Filtros: activos y morosos, por servicio y por leccion
 
   getServicios()
   {
@@ -40,7 +34,7 @@ export class AdministradorService {
   //   const headers = {"Content-Type":"application/json"};
   //   return this._http.get<any>(this._apiUrl);
   // }
-  //Filtros: activos y morosos, por servicio y por leccion
+ 
 
   //Calendario
 
