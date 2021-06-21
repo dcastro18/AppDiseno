@@ -1,8 +1,16 @@
 const administradorCtrl  = {};
 const Administrador = require('../models/administrador')
+const Instructores = require('../models/instructor')
+
 administradorCtrl.getAdministradores = async (req, res) => {
     const administradores = await Administrador.find()
     res.json(administradores);
+}
+
+
+administradorCtrl.getInstructores = async (req, res) => {
+    const instructores = await Instructores.find()
+    res.json(instructores);
 }
 
 
