@@ -1,7 +1,7 @@
 const servicioCtrl  = {};
 const Servicio = require('../models/servicio')
 servicioCtrl.getServicios = async (req, res) => {
-    const servicios = await Servicio.find()
+    const servicios = await Servicio.find({}).populate({path: 'instructores', model: 'Instructor'});
     res.json(servicios);
 }
 

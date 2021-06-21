@@ -9,5 +9,5 @@ router.get('/:id', cliente.getCliente);
 router.put('/:id', cliente.editCliente );
 router.delete('/:id', cliente.deleteCliente);
 
-
+router.get('/:leccion/:cliente', cliente.reservarLeccion);
 module.exports = router;
