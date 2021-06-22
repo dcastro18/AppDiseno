@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+
 import { CalendarioAdministradorComponent } from './calendario-administrador/calendario-administrador.component';
 import { ConfiguracionAdministradorComponent } from './configuracion-administrador/configuracion-administrador.component';
 import { GestionClientesAdministradorComponent } from './gestion-clientes-administrador/gestion-clientes-administrador.component';

@@ -7,7 +7,7 @@ const SchemaLeccion = new Schema({
     dia: { type: String , required : true},
     hora :{ type: String, required: true},
     duracion :{type: String, required: true},
-    clientes :{type: Array, required: true}
+    clientes :{type: Array, required: false}
 
 });
 

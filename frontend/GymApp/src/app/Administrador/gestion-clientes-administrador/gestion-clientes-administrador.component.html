@@ -25,37 +25,34 @@
       <div class="cardContentCenter">
         <div style="margin: 5px;">
           <label class="cardText">Nombre: </label>
-          <input id="nombre" class="cardText">
-        </div>
-        <div style="margin: 5px;">
-          <label class="cardText">Identificación: </label>
-          <input id="id" class="cardText">
+          <input #nombre class="cardText">
         </div>
         <div style="margin: 5px;">
           <label class="cardText">Correo: </label>
-          <input id="correo" class="cardText">
+          <input #correo class="cardText">
         </div>
         <div style="margin: 5px;">
           <label class="cardText">Teléfono: </label>
-          <input id="telefono" class="cardText">
+          <input #telefono class="cardText">
         </div>
         <div style="margin: 5px;">
           <label class="cardText">Contraseña: </label>
-          <input id="contraseña" class="cardText">
+          <input #contrasena class="cardText">
         </div>
-        <button class="cardButton" style="width: 50%;" (click)="registrarCliente()">Agregar cliente</button>
+        <button class="cardButton" style="width: 50%;" (click)="registrarCliente(nombre.value,correo.value, telefono.value, contrasena.value)">Agregar cliente</button>
       </div>
+      <!-- , id.value, correo.value, telefono.value, contraseña.value) -->
     </div>
   </div>
 
   <!--combobox estado-->
-  <div>
+  <!-- <div>
     <label class="cardText" for="clientState">Estado:</label>
     <select class="toolbarElement" style="margin: 5px;" name="clientState" id="clientState">
       <option value="activo">Activo</option>
       <option value="moroso">Moroso</option>
     </select>
-  </div>
+  </div> -->
   
   <!--carta cliente-->
   <div class="cardHead">
@@ -163,16 +160,16 @@
         <label class="cardText">{{ clienteLeccion.numero }}</label>
       </div>
       <div class="cardItem">
-        <label class="cardText">{{ leccionEscogida.clase }}</label>
+        <!-- <label class="cardText">{{ leccionEscogida.clase }}</label> -->
       </div>
       <div class="cardItem">
-        <label class="cardText">{{ leccionEscogida.instructor }}</label>
+        <!-- <label class="cardText">{{ leccionEscogida.instructor }}</label> -->
       </div>
       <div class="cardItem">
-        <label class="cardText">{{ leccionEscogida.fechaHora }}</label>
+        <!-- <label class="cardText">{{ leccionEscogida.fechaHora }}</label> -->
       </div>
       <div class="cardItem">
-        <label class="cardText">{{ leccionEscogida.clase }}</label>
+        <!-- <label class="cardText">{{ leccionEscogida.clase }}</label> -->
       </div>
     </ng-container> 
   </div>

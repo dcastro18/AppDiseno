@@ -18,20 +18,18 @@
 <div class="contentCenter">
   <h1>Bienvenido, <label style="color: #4FB8A5;">administrador.</label></h1>
   <!--informacion-->
-  <h2>Aforo actual: 0%</h2>
-  <h2>Clientes registrados: n</h2>
-  <h2>Instructores registrados: n</h2>
+  <h2>Aforo actual: {{ infoSala.aforo }} %</h2>
 </div>
 <!--matriz servicios-->
 <div class="contentLeft">
   <h2>Le ofrecemos los siguientes servicios:</h2>
 </div>
 <div class="contentGrid" style="align-content: center;">
-  <div class="gridItem"><h2>asd</h2></div>
-  <div class="gridItem"><h2>asd</h2></div>
-  <div class="gridItem"><h2>asd</h2></div>
-  <div class="gridItem"><h2>asd</h2></div>
-  <div class="gridItem"><h2>asd</h2></div>
+  <ng-container *ngFor="let servicio of listaServicios">
+    <div>
+      <div class="gridItem"><h2>{{ servicio.nombre }}</h2></div>
+    </div>
+  </ng-container>
 </div>
 <!--costo matricula-->
 <div class="contentCenter">

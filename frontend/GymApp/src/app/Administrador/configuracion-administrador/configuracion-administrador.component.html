@@ -18,11 +18,14 @@
   <h1>Configuración de la sala</h1>
   <div style="margin: 5px;">
     <label style="font-size: 20px;">Capacidad: </label>
-    <input style="font-size: 20px;" type="number" min="0" max="100" value="0">
+    <input #capacidad style="font-size: 20px;" type="number" min="0" max="100" value="0">
   </div>
   <div style="margin: 5px;">
-    <label style="font-size: 20px;">Costo de matrícula: ₡</label>
-    <input style="font-size: 20px;" type="number" min="0" max="100000" value="0" step="1000">
+    <label style="font-size: 20px;">Aforo: </label>
+    <input #aforo style="font-size: 20px;" type="number" min="0" max="100000" value="0" step="1000">
+  </div>
+  <div style="margin: 5px;">
+    <button class="cardButton" style="width: 100%;" (click)="modificarSala(capacidad.value,aforo.value)">Guardar</button>
   </div>
 </div>
 
@@ -60,7 +63,7 @@
         <label class="cardText">Nombre: </label>
         <input #name class="cardText">
       </div>
-      <button class="cardButton" style="width: 50%;">Agregar servicio</button>
+      <button class="cardButton" style="width: 50%;" (click)="anadirServicio(name.value)">Agregar servicio</button>
     </div>
   </div>
 </div>

@@ -33,30 +33,25 @@
       <label class="cardText">Hora</label>
     </div>
     <div class="cardItem">
-      <label class="cardText">Reservas</label>
-    </div>
-    <div class="cardItem">
     </div>
     <!--contenido calendario-->
+    <ng-container *ngFor="let leccion of listaLecciones">
+      <div class="cardItem">
+        <label class="cardText">{{ leccion.clase }}</label>
+      </div>
+      <div class="cardItem">
+        <label class="cardText">{{ leccion.dia }}</label>
+      </div>
+      <div class="cardItem">
+        <label class="cardText">{{ leccion.duracion }}</label>
+      </div>
+      <div class="cardItem">
+        <button class="cardButton">Modificar</button>
+      </div>
+    </ng-container>
     
-    <div class="cardItem">
-      <label class="cardText">Yoga</label>
-    </div>
-    <div class="cardItem">
-      <label class="cardText">Juan</label>
-    </div>
-    <div class="cardItem">
-      <label class="cardText">Martes</label>
-    </div>
-    <div class="cardItem">
-      <label class="cardText">10:00 - 11:00</label>
-    </div>
-    <div class="cardItem">
-      <label class="cardText">n/n</label>
-    </div>
-    <div class="cardItem">
-      <button class="cardButton">Modificar</button>
-    </div>
+
+    
   </div>
 </div>
 
