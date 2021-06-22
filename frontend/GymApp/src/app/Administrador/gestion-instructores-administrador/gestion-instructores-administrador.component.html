@@ -53,14 +53,12 @@
         <div style="margin: 5px;">
           <label class="cardText">Especialidades: </label>
           <form #type class="cardText">
-            <div>
-              <label class="cardText">Yoga</label>
-              <input type="checkbox" value="yoga">
-            </div>
-            <div>
-              <label class="cardText">Pilates</label>
-              <input type="checkbox" value="pilates">
-            </div>
+            <ng-container *ngFor="let servicio of listaServicios">
+              <div>
+                <label class="cardText">{{ servicio.nombre }}</label>
+                <input type="checkbox" value="yoga">
+              </div>
+            </ng-container>
           </form>
         </div>
         <button class="cardButton" style="width: 50%;">Agregar instructor</button>
@@ -101,27 +99,29 @@
     <div class="cardItem">
     </div>
     <!--contenido instructores-->
-    <div class="cardItem">
-      <label class="cardText">Marco</label>
-    </div>
-    <div class="cardItem">
-      <label class="cardText">123456789</label>
-    </div>
-    <div class="cardItem">
-      <label class="cardText">123@ejemplo.com</label>
-    </div>
-    <div class="cardItem">
-      <label class="cardText">87654321</label>
-    </div>
-    <div class="cardItem">
-      <label class="cardText">Normal</label>
-    </div>
-    <div class="cardItem">
-      <label class="cardText">Yoga, Pilates</label>
-    </div>
-    <div class="cardItem">
-      <button class="cardButton">Modificar</button>
-      <button class="cardButtonCancel">Eliminar</button>
-    </div>
+    <ng-container *ngFor="let instructor of listaInstructores">
+      <div class="cardItem">
+        <label class="cardText">{{ instructor.nombre }}</label>
+      </div>
+      <div class="cardItem">
+        <label class="cardText">{{ instructor.tipo }}</label>
+      </div>
+      <div class="cardItem">
+        <label class="cardText">{{ instructor.correo }}</label>
+      </div>
+      <div class="cardItem">
+        <label class="cardText">{{ instructor.numero }}</label>
+      </div>
+      <div class="cardItem">
+        <label class="cardText">{{ instructor.tipo }}</label>
+      </div>
+      <div class="cardItem">
+        <label class="cardText">Yoga, Pilates</label>
+      </div>
+      <div class="cardItem">
+        <button class="cardButton">Modificar</button> 
+        <button class="cardButtonCancel">Eliminar</button>
+      </div>
+    </ng-container>
   </div>
 </div>

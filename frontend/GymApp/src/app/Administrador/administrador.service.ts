@@ -16,6 +16,8 @@ export class AdministradorService {
   _apiUrl4 =  environment.url + "/api/pagos";
 
   _apiUrl5 =  environment.url + "/api/reservaciones";
+
+  _apiUrl6 =  environment.url + "/api/instructores";
   
   constructor(private _http: HttpClient) { }
   
@@ -46,6 +48,10 @@ export class AdministradorService {
   //Pagos
   getPagosRealizados(){
     return this._http.get<any>(this._apiUrl4);
+  }
+
+  getInstructores(){
+    return this._http.get<any>(this._apiUrl6);
   }
 
   

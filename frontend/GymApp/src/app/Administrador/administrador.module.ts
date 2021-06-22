@@ -18,8 +18,9 @@ import { HttpClientModule } from '@angular/common/http';
 import { AdministradorService } from './administrador.service';
 
 @NgModule({
-  declarations: [CalendarioAdministradorComponent, ConfiguracionAdministradorComponent, GestionClientesAdministradorComponent,
-  GestionClientesAdministradorComponent, GestionInstructoresAdministradorComponent,HomeAdministradorComponent, InfoClientesAdministradorComponent,
+  declarations: [CalendarioAdministradorComponent, ConfiguracionAdministradorComponent, 
+  GestionClientesAdministradorComponent,GestionClientesAdministradorComponent, 
+  GestionInstructoresAdministradorComponent,HomeAdministradorComponent, InfoClientesAdministradorComponent,
   ModificarInstructorAdministradorComponent, ModificarLeccionAdministradorComponent, PagosAdministradorComponent],
 
   imports: [
