@@ -5,6 +5,7 @@ import { ConfiguracionAdministradorComponent } from './Administrador/configuraci
 import { GestionClientesAdministradorComponent } from './Administrador/gestion-clientes-administrador/gestion-clientes-administrador.component';
 import { GestionInstructoresAdministradorComponent } from './Administrador/gestion-instructores-administrador/gestion-instructores-administrador.component';
 import { HomeAdministradorComponent } from './Administrador/home-administrador/home-administrador.component';
+import { PagosAdministradorComponent } from './Administrador/pagos-administrador/pagos-administrador.component';
 import { InfoClientesAdministradorComponent } from './Administrador/info-clientes-administrador/info-clientes-administrador.component';
 import { ModificarInstructorAdministradorComponent } from './Administrador/modificar-instructor-administrador/modificar-instructor-administrador.component';
 import { ModificarLeccionAdministradorComponent } from './Administrador/modificar-leccion-administrador/modificar-leccion-administrador.component';
@@ -33,7 +34,7 @@ const routes: Routes = [
   { path: 'admin/infoCliente/:_id', component: InfoClientesAdministradorComponent},
   { path: 'admin/modificarInstructor/:_id', component: ModificarInstructorAdministradorComponent},
   { path: 'admin/modificarLeccion/:_id', component: ModificarLeccionAdministradorComponent},
-  { path: 'admin/pagos/:_id', component: ModificarLeccionAdministradorComponent},
+  { path: 'admin/pagos/:_id', component: PagosAdministradorComponent},
  
   { path: 'cliente', component: HomeClienteComponent},
 

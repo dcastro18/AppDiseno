@@ -3,6 +3,30 @@ html{
   background-color: #212020;
 }
 
+a:link {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: white;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: gainsboro;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
 .toolbar {
   position: absolute;
   top: 0;
@@ -27,7 +51,7 @@ html{
   text-decoration: underline;
   text-underline-offset: 8px;
   text-decoration-skip-ink: none;
-  text-decoration-thickness: 4px;
+  text-decoration-thickness: 2px;
 }
 
 .spacer {
