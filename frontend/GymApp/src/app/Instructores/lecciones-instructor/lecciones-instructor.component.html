@@ -27,24 +27,26 @@
       <label class="cardText">Reservaciones</label>
     </div>
     <!--contenido lecciones-->
-    <div class="cardItem">
-      <label class="cardText">Yoga</label>
-    </div>
-    <div class="cardItem">
-      <label class="cardText">Martes</label>
-    </div>
-    <div class="cardItem">
-      <label class="cardText">10:00 - 11:00</label>
-    </div>
-    <div class="cardItem">
-      <label class="cardText">n/n</label>
-    </div>
+    <ng-container *ngFor="let leccion of listaLecciones">
+      <div class="cardItem">
+        <label class="cardText">{{ leccion.clase }}</label>
+      </div>
+      <div class="cardItem">
+        <label class="cardText">{{ leccion.dia }}</label>
+      </div>
+      <div class="cardItem">
+        <label class="cardText">{{ leccion.duracion }}</label>
+      </div>
+      <div class="cardItem">
+        <label class="cardText">n/n</label>
+      </div>
+    </ng-container>
   </div>
 </div>
 
 <div class="contentCenter">
   <!--carta lecciones siguiente mes-->
-  <div class="cardHead">
+  <!-- <div class="cardHead">
     <label class="toolbarElement">Lecciones próximo mes</label>
   </div>
   <div class="lessonCardBody">
@@ -58,9 +60,9 @@
       <label class="cardText">Hora</label>
     </div>
     <div class="cardItem">
-    </div>
+    </div> -->
     <!--contenido lecciones-->
-    <div class="cardItem">
+    <!-- <div class="cardItem">
       <label class="cardText">Yoga</label>
     </div>
     <div class="cardItem">
@@ -72,7 +74,7 @@
     <div class="cardItem">
       <button class="cardButtonCancel">Eliminar</button>
     </div>
-  </div>
+  </div> -->
 
   <!--carta agregar leccion-->
   <div class="contentCenter" style="width: 40%;">
@@ -84,15 +86,16 @@
         <!--clase-->
         <div style="margin: 5px;">
           <label class="cardText">Clase: </label>
-          <select class="cardText">
-            <option>Yoga</option>
-            <option>Pilates</option>
+          <select #clase class="cardText">
+            <ng-container *ngFor="let servicio of listaServicios">
+                <option>{{ servicio.nombre }}</option>
+            </ng-container>
           </select>
         </div>
         <!--dia-->
         <div style="margin: 5px;">
           <label class="cardText">Día: </label>
-          <select class="cardText">
+          <select #dia class="cardText">
             <option>Lunes</option>
             <option>Martes</option>
             <option>Miércoles</option>
@@ -105,22 +108,26 @@
         <!--hora-->
         <div style="margin: 5px;">
           <label class="cardText">Hora de inicio: </label>
-          <select class="cardText">
+          <select #hora class="cardText">
             <option>8:00</option>
             <option>9:00</option>
+            <option>10:00</option>
+            <option>11:00</option>
+            <option>12:00</option>
           </select>
         </div>
         <!--duracion-->
         <div style="margin: 5px;">
           <label class="cardText">Duración: </label>
-          <select class="cardText">
-            <option>30 minutos</option>
-            <option>1 hora</option>
-            <option>1:30 horas</option>
-            <option>2 horas</option>
+          <select #duracion class="cardText">
+            <option>30</option>
+            <option>45</option>
+            <option>60</option>
+            <option>80</option>
           </select>
+          <label class="cardText">Minutos </label>
         </div>
-        <button class="cardButton" style="width: 50%;">Agregar</button>
+        <button class="cardButton" style="width: 50%;"  (click)="registrarLeccion(clase.value, dia.value, hora.value, duracion.value)">Agregar</button>
       </div>
     </div>
   </div>

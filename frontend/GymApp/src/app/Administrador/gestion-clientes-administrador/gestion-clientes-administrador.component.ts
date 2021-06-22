@@ -21,15 +21,14 @@ export class GestionClientesAdministradorComponent implements OnInit {
   infoCliente = {
     nombre:     '',
     correo:     '',
-    estado:     '',
     numero:     '',
+    morosidad:    '',
     usuario:    '',
     contraseña: '',
   };
 
   constructor(
-    private _adminService: AdministradorService ,
-    //private authService : AuthserviceService
+    private _adminService: AdministradorService
   ) { }
 
   ngOnInit(): void {
@@ -60,14 +59,20 @@ export class GestionClientesAdministradorComponent implements OnInit {
   }
 
 
-  registrarCliente(){ 
-    var x = document.getElementById("nombre")?.textContent;
-    console.log(x);
-    // this._adminService.post(this.infoCliente).subscribe(
-    //   data => {
-    //     console.log(data);
-    //   }
-    // );
+  registrarCliente(nombre: string, correo: string, telefono: string, contraseña: string){ 
+
+    this.infoCliente.nombre = nombre;
+    this.infoCliente.correo = correo;
+    this.infoCliente.numero = telefono;
+    this.infoCliente.contraseña = contraseña;
+    this.infoCliente.usuario = 'cliente';
+    this.infoCliente.morosidad = '0';
+    
+    this._adminService.post(this.infoCliente).subscribe(
+      data => {
+        console.log(data);
+      }
+    );
   }
 
 }

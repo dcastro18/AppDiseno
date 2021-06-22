@@ -12,13 +12,16 @@ export class CalendarioAdministradorComponent implements OnInit {
 
   listaReservas:any = []
 
+  reservasLeccion:any = []
+
+  cant:any; 
+
   constructor(
     private _adminService: AdministradorService
   ) { }
 
   ngOnInit(): void {
     this.getLecciones();
-    this.getReservasLeccion();
   }
 
  
@@ -26,32 +29,56 @@ export class CalendarioAdministradorComponent implements OnInit {
     this._adminService.getLecciones().subscribe(
       data => {
         this.listaLecciones = data
-        console.log(data);
-        console.log("que pasa")
+        console.log(data)
       }
     );
   }
 
-  getReservasLeccion(){
+  // getReservasLeccion(listaLecciones: string | any[]){
 
-    // for (var i = 0; i < this.listaLecciones.length; i++) {
+  //   this._adminService.getReservas().subscribe(
+  //     data => {
+  //       this.listaReservas = data
+        
+  //       let cont = 0
+  //       for(var i = 0;i<listaLecciones.length;i++){
 
-    //   let idLeccion = this.listaLecciones[i]._id
+  //         for(var j = 0;j<this.listaReservas.length;j++){
+          
+  //           if(listaLecciones[i]._id == this.listaReservas[j].idLeccion){
+  //             cont++;
+  //           }
+          
+  //         }
+  //         this.reservasLeccion[i] =cont;
+  //         cont = 0;
 
-    //   this._adminService.getReservasLeccion(idLeccion).subscribe(
-    //     data => {
-    //       this.listaReservas = data
-    //       console.log(data);
-    //     }
-    //   );
-    // }
+  //       }
+  //     }
+  //   );
+  // }
 
+  getReservas(){
     this._adminService.getReservas().subscribe(
           data => {
             this.listaReservas = data
-            console.log(data);
           }
         );
+
+  }
+  reservar(){
+
+    let datosReserva = {
+      costo: '3000',
+      idCliente: '60cff886df23c83594477725',
+      idLeccion: '60d217e55ef1e93bcc1e065e'
+    }
+    this._adminService.reservar(datosReserva).subscribe(
+      data => {
+        this.listaReservas = data
+        console.log(data);
+      }
+    );
   }
 
 }

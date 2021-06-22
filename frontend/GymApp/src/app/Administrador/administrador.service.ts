@@ -18,6 +18,10 @@ export class AdministradorService {
   _apiUrl5 =  environment.url + "/api/reservaciones";
 
   _apiUrl6 =  environment.url + "/api/instructores";
+
+  _apiUrl7 =  environment.url + "/api/clientes";
+
+  _apiUrl8 =  environment.url + "/api/salas";
   
   constructor(private _http: HttpClient) { }
   
@@ -54,7 +58,39 @@ export class AdministradorService {
     return this._http.get<any>(this._apiUrl6);
   }
 
+  post(infoCliente: { nombre: string; correo: string; numero: string; usuario: string; contraseña: string; }){
+    const headers = {"Content-Type":"application/json"};
+    return this._http.post<any>(this._apiUrl7 , infoCliente, {headers});
+  }
+
+  postLeccion(infoLeccion: { clase: string; instructor: string; dia: string; hora: string; duracion: string; }){
+    const headers = {"Content-Type":"application/json"};
+    return this._http.post<any>(this._apiUrl2 , infoLeccion, {headers});
+
+  }
+
+  getSala(){
+    return this._http.get<any>(this._apiUrl8);
+  }
+
+  postSala(infoSala: { capacidad: string; aforo: string; listaLecciones: string; }){
+    const headers = {"Content-Type":"application/json"};
+    return this._http.post<any>(this._apiUrl8 , infoSala, {headers});
+  }
+
+  modificarSala(id: string, infoSala: { capacidad: string; aforo: string}){
+    return this._http.put(this._apiUrl8+'/'+id, infoSala);
+  }
+
+  postServicio(infoServicio: { nombre: string; }){
+    const headers = {"Content-Type":"application/json"};
+    return this._http.post<any>(this._apiUrl3 , infoServicio, {headers});
+  }
   
-  
+  reservar(datosReserva: { costo: string; idCliente: string; idLeccion: string; }){
+    const headers = {"Content-Type":"application/json"};
+    return this._http.post<any>(this._apiUrl5 , datosReserva, {headers});
+
+  }
 
 }
