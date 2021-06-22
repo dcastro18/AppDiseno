@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AdministradorService } from 'src/app/Administrador/administrador.service';
 
 @Component({
   selector: 'app-reservas',

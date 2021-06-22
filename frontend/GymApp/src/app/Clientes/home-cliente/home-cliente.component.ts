@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AdministradorService } from 'src/app/Administrador/administrador.service';
 
 @Component({
   selector: 'app-home-cliente',
@@ -7,9 +8,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeClienteComponent implements OnInit {
 
-  constructor() { }
+  listaServicios:any = []
+
+  constructor(
+    private _adminService: AdministradorService
+  ) { }
 
   ngOnInit(): void {
+    this.getServicios();
+  }
+
+  getServicios(){ 
+    this._adminService.getServicios().subscribe(
+      data => {
+        this.listaServicios = data
+      }
+    );
   }
 
 }

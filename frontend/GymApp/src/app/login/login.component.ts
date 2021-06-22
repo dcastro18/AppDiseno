@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
   onSubmit(userVal: string, passVal:string): void {
     this.user = userVal;
     this.password = passVal;
-    console.log(this.user+' '+this.password);
+
   }
 
 }

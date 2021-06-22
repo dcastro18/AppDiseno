@@ -15,18 +15,18 @@
 <!--descripcion-->
 <div class="contentCenter">
   <h1>Bienvenido, <label style="color: #4FB8A5;">usuario.</label></h1>
-  <p >(Descripcion o mensaje del dia)</p>
+  <p >Da siempre lo mejor de ti. Lo que siembres hoy dará su fruto mañana</p>
 </div>
 <!--matriz servicios-->
 <div class="contentLeft">
   <h2>Le ofrecemos los siguientes servicios:</h2>
 </div>
 <div class="contentGrid" style="align-content: center;">
-  <div class="gridItem"><h2>asd</h2></div>
-  <div class="gridItem"><h2>asd</h2></div>
-  <div class="gridItem"><h2>asd</h2></div>
-  <div class="gridItem"><h2>asd</h2></div>
-  <div class="gridItem"><h2>asd</h2></div>
+  <ng-container *ngFor="let servicio of listaServicios">
+    <div>
+      <div class="gridItem"><h2>{{ servicio.nombre }}</h2></div>
+    </div>
+  </ng-container>
 </div>
 <!--costo matricula-->
 <div class="contentCenter">

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ClientesService } from '../clientes.service'; 
+import { AdministradorService } from 'src/app/Administrador/administrador.service';
 
 @Component({
   selector: 'app-pagos-cliente',

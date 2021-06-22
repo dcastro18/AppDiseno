@@ -34,53 +34,34 @@
       <label class="cardText">¿Reservar?</label>
     </div>
     <!--contenido calendario-->
-    <div class="cardItem">
-      <label class="cardText">Yoga</label>
-    </div>
-    <div class="cardItem">
-      <label class="cardText">Juan</label>
-    </div>
-    <div class="cardItem">
-      <label class="cardText">Martes</label>
-    </div>
-    <div class="cardItem">
-      <label class="cardText">10:00 - 11:00</label>
-    </div>
-    <div class="cardItem">
-      <button class="cardButton">Reservar</button>
-    </div>
+    <ng-container *ngFor="let leccion of listaLecciones">
+      <div class="cardItem">
+        <label class="cardText">{{ leccion.clase }}</label>
+      </div>
+      <div class="cardItem">
+        <label class="cardText">{{ leccion.instructor.nombre }}</label>
+      </div>
+      <div class="cardItem">
+        <label class="cardText">{{ leccion.dia }}</label>
+      </div>
+      <div class="cardItem">
+        <label class="cardText">{{ leccion.hora }}</label>
+      </div>
+      <div class="cardItem">
+        <button class="cardButton">Reservar</button>
+      </div>
+    </ng-container>
+    
     <!--ejemplo reservado-->
-    <div class="cardItem">
-      <label class="cardText">Yoga</label>
-    </div>
-    <div class="cardItem">
-      <label class="cardText">Juan</label>
-    </div>
-    <div class="cardItem">
-      <label class="cardText">Martes</label>
-    </div>
-    <div class="cardItem">
-      <label class="cardText">10:00 - 11:00</label>
-    </div>
-    <div class="cardItem">
+    
+    <!-- <div class="cardItem">
       <button disabled="true" class="cardButtonDisabled">Reservado</button>
-    </div>
+    </div> -->
     <!--ejemplo cupo lleno-->
-    <div class="cardItem">
-      <label class="cardText">Yoga</label>
-    </div>
-    <div class="cardItem">
-      <label class="cardText">Juan</label>
-    </div>
-    <div class="cardItem">
-      <label class="cardText">Martes</label>
-    </div>
-    <div class="cardItem">
-      <label class="cardText">10:00 - 11:00</label>
-    </div>
-    <div class="cardItem">
+    
+    <!-- <div class="cardItem">
       <button disabled="true" class="cardButtonDisabled">Cupo lleno</button>
-    </div>
+    </div> -->
   </div>
 </div>
 
