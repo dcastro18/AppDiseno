@@ -59,13 +59,13 @@ export class GestionClientesAdministradorComponent implements OnInit {
   }
 
 
-  registrarCliente(nombre: string, correo: string, telefono: string, contraseña: string){ 
+  registrarCliente(nombre: string, correo: string, telefono: string,usuario:string, contraseña: string){ 
 
     this.infoCliente.nombre = nombre;
     this.infoCliente.correo = correo;
     this.infoCliente.numero = telefono;
     this.infoCliente.contraseña = contraseña;
-    this.infoCliente.usuario = 'cliente';
+    this.infoCliente.usuario = usuario;
     this.infoCliente.morosidad = '0';
     
     this._adminService.post(this.infoCliente).subscribe(

@@ -93,4 +93,9 @@ export class AdministradorService {
 
   }
 
+  postInstructor(infoInstructor: { nombre: string; correo: string; especialidades: string; numero: string; usuario: string; contraseña: string; }){
+    const headers = {"Content-Type":"application/json"};
+    return this._http.post<any>(this._apiUrl6 , infoInstructor, {headers});
+  }
+
 }

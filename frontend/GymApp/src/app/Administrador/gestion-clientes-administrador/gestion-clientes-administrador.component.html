@@ -36,10 +36,14 @@
           <input #telefono class="cardText">
         </div>
         <div style="margin: 5px;">
+          <label class="cardText">Usuario: </label>
+          <input #usuario class="cardText">
+        </div>
+        <div style="margin: 5px;">
           <label class="cardText">Contraseña: </label>
           <input #contrasena class="cardText">
         </div>
-        <button class="cardButton" style="width: 50%;" (click)="registrarCliente(nombre.value,correo.value, telefono.value, contrasena.value)">Agregar cliente</button>
+        <button class="cardButton" style="width: 50%;" (click)="registrarCliente(nombre.value,correo.value, telefono.value,usuario.value, contrasena.value)">Agregar cliente</button>
       </div>
       <!-- , id.value, correo.value, telefono.value, contraseña.value) -->
     </div>

@@ -11,6 +11,15 @@ export class GestionInstructoresAdministradorComponent implements OnInit {
   listaInstructores:any = [];
   listaServicios:any = []
 
+  infoInstructor = {
+    nombre:     '',
+    correo: '',
+    especialidades: '[]',
+    numero : '',
+    usuario : '',
+    contraseña: '',
+  };
+
   constructor(
     private _adminService: AdministradorService
   ) { }
@@ -38,10 +47,25 @@ export class GestionInstructoresAdministradorComponent implements OnInit {
     );
   }
 
-  onSubmit(userVal: string, passVal:string): void {
-    // this.user = userVal;
-    // this.password = passVal;
-    // console.log(this.user+' '+this.password);
+  registrarInstructor(nombre: string, correo: string, numero: string,usuario:string, contraseña: string){ 
+
+    let infoInstructor = {
+      nombre: nombre,
+      correo: correo,
+      especialidades: '[]',
+      numero : numero,
+      usuario : usuario,
+      contraseña: contraseña,
+      tipo: 'normal'
+    };
+    
+
+    this._adminService.postInstructor(infoInstructor).subscribe(
+      data => {
+        console.log(data);
+      }
+    );
   }
+
 
 }

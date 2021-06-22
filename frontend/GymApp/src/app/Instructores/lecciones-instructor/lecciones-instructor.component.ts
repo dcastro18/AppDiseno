@@ -56,11 +56,6 @@ export class LeccionesInstructorComponent implements OnInit {
     this._adminService.getLecciones().subscribe(
       data => {
         this.listaLecciones = data
-
-        //this.leccionEscogida= this.listaLecciones[0]; // cambiar
-        // this.clientesLeccionEscogida = this.leccionEscogida.clientes;
-        // console.log(this.leccionEscogida);
-
       }
     );
   }

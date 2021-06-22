@@ -28,10 +28,6 @@
           <input #name class="cardText">
         </div>
         <div style="margin: 5px;">
-          <label class="cardText">Identificación: </label>
-          <input #id class="cardText">
-        </div>
-        <div style="margin: 5px;">
           <label class="cardText">Correo: </label>
           <input #email class="cardText">
         </div>
@@ -40,39 +36,43 @@
           <input #phone class="cardText">
         </div>
         <div style="margin: 5px;">
+          <label class="cardText">Usuario: </label>
+          <input #usuario class="cardText">
+        </div>
+        <div style="margin: 5px;">
           <label class="cardText">Contraseña: </label>
           <input #password class="cardText">
         </div>
-        <div style="margin: 5px;">
+        <!-- <div style="margin: 5px;">
           <label class="cardText">Tipo: </label>
           <select #type class="cardText">
             <option value="normal">Normal</option>
             <option value="temporal">Temporal</option>
           </select>
-        </div>
+        </div> -->
         <div style="margin: 5px;">
           <label class="cardText">Especialidades: </label>
           <form #type class="cardText">
             <ng-container *ngFor="let servicio of listaServicios">
               <div>
                 <label class="cardText">{{ servicio.nombre }}</label>
-                <input type="checkbox" value="yoga">
+                <input type="checkbox" value="{{ servicio.nombre }}">
               </div>
             </ng-container>
           </form>
         </div>
-        <button class="cardButton" style="width: 50%;">Agregar instructor</button>
+        <button class="cardButton" style="width: 50%;" (click)="registrarInstructor(name.value,email.value,phone.value,usuario.value,password.value)">Agregar instructor</button>
       </div>
     </div>
   </div>
   <!--combobox estado-->
-  <div>
+  <!-- <div>
     <label class="cardText" for="clientState">Estado:</label>
     <select class="toolbarElement" style="margin: 5px;" name="clientState" id="clientState">
       <option value="activo">Normal</option>
       <option value="moroso">Temporal</option>
     </select>
-  </div>
+  </div> -->
   <!--carta instructores-->
   <div class="cardHead">
     <label class="toolbarElement">Instructores</label>
@@ -80,9 +80,6 @@
   <div class="instructorCardBody">
     <div class="cardItem">
       <label class="cardText">Nombre</label>
-    </div>
-    <div class="cardItem">
-      <label class="cardText">Identificación</label>
     </div>
     <div class="cardItem">
       <label class="cardText">Correo</label>
@@ -93,18 +90,15 @@
     <div class="cardItem">
       <label class="cardText">Tipo</label>
     </div>
-    <div class="cardItem">
+    <!-- <div class="cardItem">
       <label class="cardText">Especialidades</label>
-    </div>
+    </div> -->
     <div class="cardItem">
     </div>
     <!--contenido instructores-->
     <ng-container *ngFor="let instructor of listaInstructores">
       <div class="cardItem">
         <label class="cardText">{{ instructor.nombre }}</label>
-      </div>
-      <div class="cardItem">
-        <label class="cardText">{{ instructor.tipo }}</label>
       </div>
       <div class="cardItem">
         <label class="cardText">{{ instructor.correo }}</label>
@@ -115,9 +109,9 @@
       <div class="cardItem">
         <label class="cardText">{{ instructor.tipo }}</label>
       </div>
-      <div class="cardItem">
+      <!-- <div class="cardItem">
         <label class="cardText">Yoga, Pilates</label>
-      </div>
+      </div> -->
       <div class="cardItem">
         <button class="cardButton">Modificar</button> 
         <button class="cardButtonCancel">Eliminar</button>
