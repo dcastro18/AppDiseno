@@ -10,12 +10,15 @@ export class CalendarioAdministradorComponent implements OnInit {
 
   listaLecciones:any = []
 
+  listaReservas:any = []
+
   constructor(
     private _adminService: AdministradorService
   ) { }
 
   ngOnInit(): void {
     this.getLecciones();
+    this.getReservasLeccion();
   }
 
  
@@ -24,8 +27,31 @@ export class CalendarioAdministradorComponent implements OnInit {
       data => {
         this.listaLecciones = data
         console.log(data);
+        console.log("que pasa")
       }
     );
+  }
+
+  getReservasLeccion(){
+
+    // for (var i = 0; i < this.listaLecciones.length; i++) {
+
+    //   let idLeccion = this.listaLecciones[i]._id
+
+    //   this._adminService.getReservasLeccion(idLeccion).subscribe(
+    //     data => {
+    //       this.listaReservas = data
+    //       console.log(data);
+    //     }
+    //   );
+    // }
+
+    this._adminService.getReservas().subscribe(
+          data => {
+            this.listaReservas = data
+            console.log(data);
+          }
+        );
   }
 
 }

@@ -12,6 +12,10 @@ export class AdministradorService {
   _apiUrl2 =  environment.url + "/api/lecciones";
 
   _apiUrl3 =  environment.url + "/api/servicios";
+
+  _apiUrl4 =  environment.url + "/api/pagos";
+
+  _apiUrl5 =  environment.url + "/api/reservaciones";
   
   constructor(private _http: HttpClient) { }
   
@@ -25,21 +29,26 @@ export class AdministradorService {
     return this._http.get<any>(this._apiUrl3);
   }
 
-  // post(infoCliente){
-  //   const headers = {"Content-Type":"application/json"};
-  //   return this._http.post<any>(this._apiUrl , infoCliente, {headers});
-  // }
-
-  // getClientes(){ 
-  //   const headers = {"Content-Type":"application/json"};
-  //   return this._http.get<any>(this._apiUrl);
-  // }
- 
-
   //Calendario
 
   getLecciones(){
     return this._http.get<any>(this._apiUrl2);
   }
+
+  getReservasLeccion(idLeccion: any){
+    return this._http.get<any>(this._apiUrl+'/'+idLeccion);
+  }
+
+  getReservas(){
+    return this._http.get<any>(this._apiUrl5);
+  }
+
+  //Pagos
+  getPagosRealizados(){
+    return this._http.get<any>(this._apiUrl4);
+  }
+
+  
+  
 
 }

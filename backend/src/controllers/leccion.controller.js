@@ -1,7 +1,10 @@
 const leccionCtrl  = {};
 const Leccion = require('../models/leccion')
+
+
 leccionCtrl.getLecciones = async (req, res) => {
-    const lecciones = await Leccion.find()
+    const lecciones = await Leccion.count();
+    console.log(lecciones);
     res.json(lecciones);
 }
 

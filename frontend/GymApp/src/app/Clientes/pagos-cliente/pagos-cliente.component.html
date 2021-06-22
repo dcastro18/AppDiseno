@@ -56,17 +56,19 @@
       <label class="cardText">Método</label>
     </div>
     <!--contenido pagos realizados-->
-    <div class="cardItem">
-      <label class="cardText">10,000</label>
-    </div>
-    <div class="cardItem">
-      <label class="cardText">Yoga, martes, 11:00</label>
-    </div>
-    <div class="cardItem">
-      <label class="cardText">22/05/2021</label>
-    </div>
-    <div class="cardItem">
-      <label class="cardText">Sinpe</label>
-    </div>
+    <ng-container *ngFor="let pagosRealizados of listaPagosRealizados">
+      <div class="cardItem">
+        <label class="cardText">{{ pagosRealizados.monto }}</label>
+      </div>
+      <div class="cardItem">
+        <label class="cardText">Yoga, martes, 11:00</label>
+      </div>
+      <div class="cardItem">
+        <label class="cardText">22/05/2021</label>
+      </div>
+      <div class="cardItem">
+        <label class="cardText">{{ pagosRealizados.metodo }}</label>
+      </div>
+    </ng-container>
   </div>
 </div>

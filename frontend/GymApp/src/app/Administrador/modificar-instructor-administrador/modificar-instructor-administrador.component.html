@@ -55,14 +55,12 @@
       <div style="margin: 5px;">
         <label class="cardText">Especialidades: </label>
         <form #type class="cardText">
-          <div>
-            <label class="cardText">Yoga</label>
-            <input type="checkbox" value="yoga">
-          </div>
-          <div>
-            <label class="cardText">Pilates</label>
-            <input type="checkbox" value="pilates">
-          </div>
+          <ng-container *ngFor="let servicio of listaServicios">
+            <div>
+              <label class="cardText">{{ servicio.nombre }}</label>
+              <input type="checkbox" value="yoga">
+            </div>
+          </ng-container>
         </form>
       </div>
       <button class="cardButton" style="width: 50%;">Guardar cambios</button>
